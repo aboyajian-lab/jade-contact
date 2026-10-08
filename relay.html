@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>relay</title></head><body>
+<p>Sending icons...</p>
+<script>
+(async function(){
+  var icons={"icon-butterflymx.png":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a5/06/99/a50699db-d741-6c35-da5e-3403bdc873f0/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/360x360bb.png","icon-foliospace.png":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ec/68/74/ec68743c-2db8-89ee-6a58-f7998fc243c1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/360x360bb.png"};
+  var out=[];
+  for (var n in icons){ var r=await fetch(icons[n]); out.push({name:n, blob: await r.blob()}); }
+  if (window.opener) { window.opener.postMessage({jadeIcons: out}, "https://github.com"); document.body.textContent="Sent."; }
+  else { document.body.textContent="No opener."; }
+})();
+</script></body></html>
