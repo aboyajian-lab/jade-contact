@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Save The Jade</title>
+<meta name="theme-color" content="#002E44">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{--navy:#002E44;--bg:#F4F1EC;--card:#FFFFFF;--ink:#16252D;--muted:#5E6B72;--line:#E3DDD3;--soft:#F7F4EF;--onnavy:#F4EFE6;--onnavy2:rgba(244,239,230,.74);--btn:#002E44;--btnink:#FFFFFF;--ghost:#002E44}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0C171D;--card:#13222A;--ink:#EEF2F4;--muted:#9AA8AF;--line:#24363F;--soft:#182A33;--btn:#D8C29A;--btnink:#0C171D;--ghost:#D8C29A}}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font-family:Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{display:flex;justify-content:center;padding:28px 16px 40px}
+.card{width:100%;max-width:480px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 44px rgba(0,46,68,.12)}
+.hero{background:var(--navy);padding:34px 24px 28px;text-align:center}
+.logo{width:96px;height:96px;border-radius:22px;object-fit:cover;display:block;margin:0 auto 16px;box-shadow:0 0 0 1px rgba(216,194,154,.35)}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8C29A;font-weight:600;margin:0 0 6px}
+h1{margin:0;color:var(--onnavy);font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:40px;line-height:1}
+.sub{color:var(--onnavy2);margin:10px 0 0;font-size:15px}
+.content{padding:20px;display:flex;flex-direction:column;gap:14px}
+.option{border:1px solid var(--line);border-radius:16px;padding:18px}
+.label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 4px}
+.title{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:26px;line-height:1.1}
+.num{margin:6px 0 2px;font-size:22px;font-weight:500;font-variant-numeric:tabular-nums}
+.details{margin:0 0 14px;color:var(--muted);font-size:14.5px}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;padding:12px 16px;border-radius:12px;background:var(--btn);color:var(--btnink);border:0;text-decoration:none;font:inherit;font-weight:600;font-size:16px;cursor:pointer}
+.row{display:flex;gap:8px;margin-top:8px}
+.ghost{flex:1;display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--soft);color:var(--ghost);text-decoration:none;font:inherit;font-weight:500;font-size:15px;cursor:pointer}
+.btn:focus-visible,.ghost:focus-visible{outline:3px solid #D8C29A;outline-offset:2px}
+.both{margin:0 20px 4px}
+.both .btn{background:transparent;color:var(--ghost);border:1.5px solid var(--ghost)}
+.foot{text-align:center;color:var(--muted);font-size:12px;padding:16px 24px 22px;letter-spacing:.04em}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+[hidden]{display:none!important}
+</style>
+</head><body>
+<div class="wrap"><main class="card">
+  <section class="hero">
+    <img class="logo" src="jade-avatar.jpg" alt="The Jade logo">
+    <p class="eyebrow">The Jade · Winter Haven</p>
+    <h1>Save The Jade</h1>
+    <p class="sub">Two numbers worth keeping in your phone.</p>
+  </section>
+  <section class="content">
+    <div class="option">
+      <p class="label">Resident text line</p><h2 class="title">The Jade – Text</h2>
+      <p class="num">901-472-7074</p><p class="details">Text us anytime with questions, requests and move-in details.</p>
+      <a class="btn" href="the-jade-text.vcf" download>Save to contacts</a>
+      <div class="row"><a class="ghost" href="sms:+19014727074">Text</a><a class="ghost" href="tel:+19014727074">Call</a><button class="ghost" type="button" data-copy="901-472-7074">Copy</button></div>
+    </div>
+    <div class="option">
+      <p class="label">Leasing office</p><h2 class="title">The Jade – Leasing</h2>
+      <p class="num">(863) 789-5233</p><p class="details">leasing@thejadewh.com<br>1150 3rd St SW, Winter Haven</p>
+      <a class="btn" href="the-jade-leasing.vcf" download>Save to contacts</a>
+      <div class="row"><a class="ghost" href="sms:+18637895233">Text</a><a class="ghost" href="tel:+18637895233">Call</a><button class="ghost" type="button" data-copy="(863) 789-5233">Copy</button></div>
+    </div>
+  </section>
+  <div class="both"><a class="btn" href="the-jade-contacts.vcf" download>Save both contacts</a></div>
+  <div class="foot">The Jade Apartments · Winter Haven, Florida</div>
+</main></div>
+<div class="toast" id="toast" hidden>Copied</div>
+<script>
+(function(){
+var t=document.getElementById('toast'),timer;
+function toast(m){t.textContent=m;t.hidden=false;clearTimeout(timer);timer=setTimeout(function(){t.hidden=true;},1600);}
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var v=b.getAttribute('data-copy');
+    var p=navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(v):Promise.reject();
+    p.then(function(){toast('Copied '+v);}).catch(function(){
+      var r=document.createRange(),n=b.closest('.option').querySelector('.num');r.selectNodeContents(n);
+      var s=getSelection();s.removeAllRanges();s.addRange(r);toast('Number selected');});
+  });
+});
+})();
+</script>
+</body></html>
