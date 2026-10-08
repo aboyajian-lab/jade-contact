@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Jade Apps</title>
+<meta name="theme-color" content="#002E44">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{--navy:#002E44;--bg:#F4F1EC;--card:#FFFFFF;--ink:#16252D;--muted:#5E6B72;--line:#E3DDD3;--soft:#F7F4EF;--btn:#002E44;--btnink:#FFFFFF;--ghost:#002E44}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0C171D;--card:#13222A;--ink:#EEF2F4;--muted:#9AA8AF;--line:#24363F;--soft:#182A33;--btn:#D8C29A;--btnink:#0C171D;--ghost:#D8C29A}}
+*{box-sizing:border-box}html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font-family:Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5}
+.wrap{display:flex;justify-content:center;padding:28px 16px 40px}
+.card{width:100%;max-width:480px;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 44px rgba(0,46,68,.12)}
+.hero{background:var(--navy);padding:30px 24px 26px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8C29A;font-weight:600;margin:0 0 6px}
+h1{margin:0;color:#F4EFE6;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:38px;line-height:1}
+.sub{color:rgba(244,239,230,.74);margin:10px 0 0;font-size:15px}
+.content{padding:20px;display:flex;flex-direction:column;gap:14px}
+.app{border:1px solid var(--line);border-radius:16px;padding:18px}
+.head{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.head img{width:64px;height:64px;border-radius:15px;flex:none;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.name{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:26px;line-height:1.05}
+.what{margin:2px 0 0;color:var(--muted);font-size:14px}
+.row{display:flex;gap:8px}
+.btn{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 12px;border-radius:12px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--soft);color:var(--ghost)}
+.btn.primary{background:var(--btn);color:var(--btnink);border-color:var(--btn)}
+.foot{text-align:center;color:var(--muted);font-size:12.5px;padding:6px 24px 22px}
+.foot a{color:inherit}
+</style></head><body>
+<div class="wrap"><main class="card">
+ <section class="hero"><p class="eyebrow">The Jade · Winter Haven</p><h1>Get the apps</h1><p class="sub">Install both before move-in day.</p></section>
+ <section class="content">
+  <div class="app"><div class="head"><img src="icon-foliospace.png" alt="FolioSpace app icon"><div><h2 class="name">FolioSpace</h2><p class="what">Rent, work orders, your lease and insurance.</p></div></div>
+   <div class="row"><a class="btn ios" href="https://apps.apple.com/us/app/online-portal-by-appfolio/id1376350358">App Store</a><a class="btn android" href="https://play.google.com/store/apps/details?id=com.appfolio.resident_portal">Google Play</a></div></div>
+  <div class="app"><div class="head"><img src="icon-butterflymx.png" alt="ButterflyMX app icon"><div><h2 class="name">ButterflyMX</h2><p class="what">Your door, the gates, guests and deliveries.</p></div></div>
+   <div class="row"><a class="btn ios" href="https://apps.apple.com/us/app/butterflymx/id714133074">App Store</a><a class="btn android" href="https://play.google.com/store/apps/details?id=com.butterflymx.butterflymx">Google Play</a></div></div>
+ </section>
+ <div class="foot">Watch your email for both invitations, then sign in with that email address.<br>Questions? Text 901-472-7074 · <a href="./">Save our contacts</a></div>
+</main></div>
+<script>
+(function(){var ua=navigator.userAgent||"";var ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);var and=/Android/.test(ua);
+document.querySelectorAll(and?".btn.android":".btn.ios").forEach(function(a){a.classList.add("primary");});})();
+</script>
+</body></html>
